@@ -14,7 +14,7 @@
 
 ### **_Getting Started_**
 
-- `Fork` and `Clone`
+- `Fork` & `Clone`
 - `npm install`
 - `npm start`
 
