@@ -5,7 +5,10 @@ const Course = ({courses})=>{
                 <h1>{courses.name}</h1>
             </div>
             <div>
-                <h1>{courses.gpa}</h1>
+                <h1>{courses.studentId}</h1>
+            </div>
+            <div>
+                <h1>{courses.grade}</h1>
             </div>
         </div>
     )

@@ -42,4 +42,4 @@ return(
 )
 }
 
-export default AllCourses
+export default AllCourses;
