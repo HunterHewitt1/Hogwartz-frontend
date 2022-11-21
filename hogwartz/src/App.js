@@ -6,7 +6,6 @@ import SearchResults from './pages/SearchResults'
 import AddStudent from './components/AddStudent'
 import AddCourse from './components/AddCourse'
 import AllCourses from './components/AllCourses'
-
 function App() {
   return (
     <div className="App">
