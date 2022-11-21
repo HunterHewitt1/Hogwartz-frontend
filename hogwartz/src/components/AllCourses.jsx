@@ -7,7 +7,6 @@ import { BASE_URL } from '../globals'
 
 const AllCourses = () => {
   const allcoursesstyle = {
-    backgroundColor:'pink'
   }
   const navigate = useNavigate()
   const [searchQuery,setSearchQuery] = useState('')
