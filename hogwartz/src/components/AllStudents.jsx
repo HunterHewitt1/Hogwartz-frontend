@@ -4,6 +4,7 @@ import {BASE_URL} from '../globals'
 
 import Search from './Search'
 import {  useNavigate } from 'react-router-dom'
+import Student from './Student'
 
 const AllStudents = () => {
   const allstudentsstyle = {
@@ -11,15 +12,16 @@ const AllStudents = () => {
   }
   const navigate = useNavigate()
 const [searchQuery,setSearchQuery] = useState('')
-const [coursesList, setCoursesList] = useState([])
+const [students, setStudents] = useState([])
 
-  const getAllCourses = async () => {
-    const res = await axios.get(`${BASE_URL}/api/courses/`)
-    setCoursesList(res.data)
+  const getAllStudents = async () => {
+    const res = await axios.get(`${BASE_URL}/students/`)
+    setStudents(res.data)
   }
   useEffect(() => {
-    getAllCourses()
+    getAllStudents()
   }, [])
+  // console.log(students)
 
 const handleSubmit =(e)=>{
   e.preventDefault()
@@ -33,11 +35,14 @@ const handleChange =(e)=>{
 }
 return(
   <div style={allstudentsstyle}>
-    <p>List of all students</p>
     <Search onSubmit={handleSubmit}handleChange={handleChange} value={searchQuery}/>
-    
+    <p>List of all students</p>
+    {students.map((student) => (
+                <Student
+                  studentsList={student}
+                />
+            ))}
   </div>
-)
-}
+)}
 
 export default AllStudents
