@@ -1,3 +1,7 @@
+
+import Search from './Search'
+
+
 const Nav = () => {
 const navstyle = {
   backgroundColor: 'red'
