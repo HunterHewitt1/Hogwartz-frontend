@@ -12,17 +12,17 @@ import axios from 'axios'
 import { useParams, useState } from 'react'
 
 function App() {
-  const [student, setStudent] = useState('')
+  // const [student, setStudent] = useState('')
 
-  const viewStudent = async (id) => {
-    try {
-      const res = await axios.get(`${BASE_URL}/students/${id}`)
-      setStudent(res.data)
-      console.log(student.id)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  // const viewStudent = async (id) => {
+  //   try {
+  //     const res = await axios.get(`${BASE_URL}/students/${id}`)
+  //     setStudent(res.data)
+  //     console.log(student)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
   return (
     <div className="App">
@@ -30,10 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search-results/:search" element={<SearchResults />} />
-        <Route
-          path="/allstudents"
-          element={<AllStudents viewStudent={viewStudent} />}
-        />
+        <Route path="/allstudents" element={<AllStudents />} />
         <Route path="/allcourses" element={<AllCourses />} />
         <Route path="/addstudent" element={<AddStudent />} />
         <Route path="/students/:id" element={<Student />} />
