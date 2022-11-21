@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import {BASE_URL} from '../globals'
+
 import Search from './Search'
 import {  useNavigate } from 'react-router-dom'
 
