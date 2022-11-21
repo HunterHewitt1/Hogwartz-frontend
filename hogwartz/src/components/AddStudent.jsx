@@ -22,7 +22,7 @@ const handleSubmit = async (e)=>{
     console.log(formValues)
 
     const newStudent = await axios.post(
-        `${BASE_URL}/student`,formValues).then((response)=>{
+        `${BASE_URL}/students/new`,formValues).then((response)=>{
         return response;
     })
     .catch((error)=>{
