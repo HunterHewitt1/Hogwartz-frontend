@@ -1,11 +1,11 @@
-const Course = ({courses})=>{
+const Course = (props)=>{
     return (
         <div>
             <div>
-                <h1>{courses.name}</h1>
+                <h1>{props.courseslist.name}</h1>
             </div>
             <div>
-                <h1>{courses.gpa}</h1>
+                <h1>grade = {props.courseslist.grade}</h1>
             </div>
         </div>
     )
