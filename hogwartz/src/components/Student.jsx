@@ -1,5 +1,4 @@
 const Student = (props)=>{
-    console.log(props.studentsList)
     return (
         <div>
             <div>
