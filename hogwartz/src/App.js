@@ -6,6 +6,14 @@ function App() {
       <p>app.js hogwartz</p>
       <Nav />
       <Home />
+      <main>
+        <Routes>
+        <Route
+						path="/search-results/:student"
+						element={<SearchResults />}
+					/>
+        </Routes>
+      </main>
     </div>
   )
 }
