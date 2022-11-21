@@ -21,7 +21,6 @@ const [students, setStudents] = useState([])
   useEffect(() => {
     getAllStudents()
   }, [])
-  // console.log(students)
 
 const handleSubmit =(e)=>{
   e.preventDefault()
@@ -40,6 +39,7 @@ return(
     {students.map((student) => (
                 <Student
                   studentsList={student}
+                  key={student.id}
                 />
             ))}
   </div>

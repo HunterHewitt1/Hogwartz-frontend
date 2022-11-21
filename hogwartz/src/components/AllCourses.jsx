@@ -29,7 +29,6 @@ const AllCourses = () => {
   }
   useEffect(()=>{
     getAllCourses()},[])
-    console.log(courses)
 return(
   <div style={allcoursesstyle}>
   <Search onSubmit={handleSubmit}handleChange={handleChange} value={searchQuery}/>
@@ -37,6 +36,7 @@ return(
     {courses.map((course) => (
                 <Course
                   courseslist={course}
+                  key={course.id}
                 />
             ))}
   </div>
