@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
 const navstyle = {
-  backgroundColor: 'red'
+  backgroundColor: '#F57017'
+
 }
   return (
   <div style={navstyle}>
-    <Link to={'/allstudents'}>All Students</Link>
-    <Link to={'/addstudent'}>Add Student</Link>
-    <Link to={'/'}>Home</Link>
+    <Link to={'/'}>Home | </Link>
+    <Link to={'/allstudents'}>All Students | </Link>
+    <Link to={'/allcourses'}>All Coursess | </Link>
+    <Link to={'/addstudent'}>Add Student | </Link>
+    <Link to={'/addcourse'}>Add Course | </Link>
+
   </div>
 )
 }
