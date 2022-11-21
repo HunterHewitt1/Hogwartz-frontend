@@ -1,5 +1,5 @@
 import AllStudents from './AllStudents'
-import Search from './Search'
+
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
@@ -9,6 +9,8 @@ const navstyle = {
   textAlign: 'center',
   padding: "40px 0"
 }
+
+
   return (
   <div style={navstyle}>
     <Link to={'/'}>Home | </Link>
@@ -16,6 +18,7 @@ const navstyle = {
     <Link to={'/allcourses'}>All Coursess | </Link>
     <Link to={'/addstudent'}>Add Student | </Link>
     <Link to={'/addcourse'}>Add Course | </Link>
+   
 
   </div>
 )
