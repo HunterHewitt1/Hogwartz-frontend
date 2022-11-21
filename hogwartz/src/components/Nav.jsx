@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
 const navstyle = {
-  backgroundColor: '#F57017'
-
+  backgroundColor: '#F57017',
+  justifyContent: 'space-between',
+  textAlign: 'center',
+  padding: "40px 0"
 }
   return (
   <div style={navstyle}>
