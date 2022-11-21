@@ -43,7 +43,7 @@ return(
                   studentid={student.id}
                   studentsList={student}
                   key={student.id}
-                  viewStudent={viewStudent}
+                  // viewStudent={()=>viewStudent(student.id)}
                   />
             ))}
   </div>

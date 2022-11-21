@@ -1,3 +1,7 @@
+import { BASE_URL } from '../globals'
+import axios from 'axios'
+import { useParams, useState } from 'react'
+
 const Student = (props)=>{
     const studentCardStyle = {
         display: 'inlineBlock',
@@ -16,26 +20,26 @@ const Student = (props)=>{
         color: 'black'       
     }
 
+    const [student, setStudent] = useState('')
 
+    const viewStudent = async (id) => {
+        const res = await axios.get(`${BASE_URL}/students/${id}`)
+        setStudent(res.data)
+        console.log(student)
+    }
 
     return (
         <div style={studentCardStyle}>
             <div>
                 <h1>{props.studentsList.name}</h1>
             </div>
-            {/* <div>
-                <h2>house</h2>
-            </div>
             <div>
-                <h2>courses</h2>
-            </div> */}
+                <h2>{props.studentsList.id}</h2>
+            </div>
             <div>
                 <h2>{props.studentsList.email}</h2>
             </div>
-            {/* <div>
-                <h3>gpa</h3>
-            </div> */}
-            <button onClick={()=>props.viewStudent(props.studentid)}>
+            <button onClick={()=>viewStudent(props.studentid)}>
                 see student details
             </button>
         </div>
