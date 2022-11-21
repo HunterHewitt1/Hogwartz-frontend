@@ -14,8 +14,8 @@ const AllCourses = () => {
   const [courses,setCourses]= useState([])
 
   const getAllCourses = async ()=>{
-    const response = await axios.get(`${BASE_URL}/allcourses`)
-    setCourses(response.data.courses)
+    const response = await axios.get(`${BASE_URL}/courses`)
+    setCourses(response.data)
   }
   const handleSubmit =(e)=>{
     e.preventDefault()
@@ -28,16 +28,17 @@ const AllCourses = () => {
     setSearchQuery(e.target.value.toLowerCase())
   }
   useEffect(()=>{
-    getAllCourses
+    getAllCourses()},[])
+    console.log(courses)
 return(
   <div style={allcoursesstyle}>
+  <Search onSubmit={handleSubmit}handleChange={handleChange} value={searchQuery}/>
     <p>List of all courses</p>
-    <Search onSubmit={handleSubmit}handleChange={handleChange} value={searchQuery}/>
-   {courses.map((course)=>{
-    <Link to ={`/course/${course._id}`} key={course._id}>
-      <Course courses={course} />
-    </Link>
-   })}
+    {courses.map((course) => (
+                <Course
+                  courseslist={course}
+                />
+            ))}
   </div>
 )
 }
