@@ -1,7 +1,8 @@
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useParams, useState } from 'react'
-
+import StudentProfile from './StudentProfile'
+import { Link } from 'react-router-dom'
 const Student = (props)=>{
     const studentCardStyle = {
         display: 'inlineBlock',
@@ -40,7 +41,7 @@ const Student = (props)=>{
                 <h2>{props.studentsList.email}</h2>
             </div>
             <button onClick={()=>viewStudent(props.studentid)}>
-                see student details
+                <Link to={`/studentprofile/${props.studentid}`}>get details</Link>
             </button>
         </div>
     )
