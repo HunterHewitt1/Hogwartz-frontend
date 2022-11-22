@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Course = (props)=>{
     const courseCardStyle = {
         display: 'inlineBlock',
@@ -24,6 +26,9 @@ const Course = (props)=>{
             <div>
                 <h1>grade = {props.courseslist.grade}</h1>
             </div>
+            <button>
+                <Link to={`/courseprofile/${props.courseslist.id}`}>get details</Link>
+            </button>
         </div>
     )
 }

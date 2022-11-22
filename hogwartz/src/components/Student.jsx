@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useParams, useState } from 'react'
 import StudentProfile from './StudentProfile'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 const Student = (props)=>{
     const studentCardStyle = {
         display: 'inlineBlock',
@@ -29,13 +30,14 @@ const Student = (props)=>{
         console.log(student)
     }
 
+
     return (
         <div style={studentCardStyle}>
             <div>
                 <h1>{props.studentsList.name}</h1>
             </div>
             <div>
-                <h2>{props.studentsList.id}</h2>
+                <h2>GPA = {props.studentsList.gpa}</h2>
             </div>
             <div>
                 <h2>{props.studentsList.email}</h2>
