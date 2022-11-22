@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useParams, useState } from 'react'
 import { useEffect } from 'react'
 import StudentCourseCard from './StudentCourseCard'
+import Nav from './Nav'
 
 const StudentProfile = () => {
   let id = window.location.href.split('/').reverse()[0]
@@ -31,6 +32,8 @@ const StudentProfile = () => {
 
   return(
     <div>
+            <Nav />
+
 <h1>{student.name}</h1>
 <h3>{student.email}</h3>
 <StudentCourseCard courses={student.courses} />

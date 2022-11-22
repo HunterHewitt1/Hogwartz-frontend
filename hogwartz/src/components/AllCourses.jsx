@@ -4,9 +4,11 @@ import Search from './Search'
 import axios from 'axios'
 import Course from '../components/Course'
 import { BASE_URL } from '../globals'
+import Nav from './Nav'
 
 const AllCourses = () => {
   const allcoursesstyle = {
+    backgroundColor:'#111'
   }
   const navigate = useNavigate()
   const [searchQuery,setSearchQuery] = useState('')
@@ -28,10 +30,20 @@ const AllCourses = () => {
   }
   useEffect(()=>{
     getAllCourses()},[])
+
+    const pstyle = {
+      fontSize: "1.2em",
+      lineHeight: "150%",
+      textAlign: "center",
+      color: "MintCream",
+      letterSpacing: ".5px"
+    }
 return(
   <div style={allcoursesstyle}>
+          <Nav />
+
   <Search onSubmit={handleSubmit}handleChange={handleChange} value={searchQuery}/>
-    <p>List of all courses</p>
+    <p style={pstyle}>List of all courses</p>
     {courses.map((course) => (
                 <Course
                   courseslist={course}

@@ -15,7 +15,7 @@ import { useParams, useState } from 'react'
 function App() {
   return (
     <div className="App">
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search-results/:search" element={<SearchResults />} />

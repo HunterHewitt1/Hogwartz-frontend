@@ -4,6 +4,8 @@ import { useParams, useState } from 'react'
 import StudentProfile from './StudentProfile'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
+import '../Style/index.css'
+
 const Student = (props)=>{
     const studentCardStyle = {
         display: 'inlineBlock',
@@ -17,9 +19,9 @@ const Student = (props)=>{
         boxShadow: '0 1px 3px rgba(0, 0, 0, 0.15)',
         margin: '0 auto 20px auto',
         padding: '0 16px 16px 16px',
-        maxWidth: '468px',
+        maxWidth: '268px',
         textAlign: 'left',
-        color: 'black'       
+        backgroundColor:'#235789'   
     }
 
     const [student, setStudent] = useState('')
@@ -31,7 +33,6 @@ const Student = (props)=>{
     }
 
 
-
     return (
         <div style={studentCardStyle}>
             <div>
@@ -40,7 +41,7 @@ const Student = (props)=>{
             <div>
                 <h2>{props.studentsList.email}</h2>
             </div>
-            <button onClick={()=>viewStudent(props.studentid)}>
+            <button className='btns' onClick={()=>viewStudent(props.studentid)}>
                 <Link to={`/studentprofile/${props.studentid}`}>get details</Link>
             </button>
         </div>

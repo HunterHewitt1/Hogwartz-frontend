@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import '../Style/index.css'
 
 const Course = (props)=>{
     const courseCardStyle = {
@@ -13,9 +14,10 @@ const Course = (props)=>{
         boxShadow: '0 1px 3px rgba(0, 0, 0, 0.15)',
         margin: '0 auto 20px auto',
         padding: '0 16px 16px 16px',
-        maxWidth: '468px',
+        maxWidth: '268px',
         textAlign: 'left',
-        color: 'black'       
+        color: 'black',
+        backgroundColor:'#235789'  
     }
 
     return (

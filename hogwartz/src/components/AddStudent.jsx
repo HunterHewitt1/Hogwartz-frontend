@@ -2,6 +2,7 @@ import axios from 'axios'
 import {useState} from 'react'
 import { useNavigate} from 'react-router-dom'
 import {BASE_URL} from '../globals'
+import Nav from './Nav'
 
 const AddStudent =()=>{
     const navigate = useNavigate()
@@ -56,11 +57,17 @@ const formStyle = {
   margin: '0 auto 20px auto',
   padding: '0 16px 16px 16px',
   maxWidth: '468px',
-  textAlign: 'left'
+  textAlign: 'left',
+  marginTop: '10px',
+  backgroundColor: 'PaleGoldenRod'
 }
 
 return (
+    <>
+    <Nav />
     <div className="addStudentPage" style={formStyle}>
+              
+
 			<form onSubmit={handleSubmit}>
 				<h1>Creating New Student</h1>
 				<div>
@@ -88,7 +95,7 @@ return (
 				<button>Submit</button>
 			</form>
 		</div>
-
+        </>
 )
 }
 

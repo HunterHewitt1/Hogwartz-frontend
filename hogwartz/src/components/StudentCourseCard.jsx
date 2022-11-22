@@ -2,6 +2,7 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useParams, useState } from 'react'
 import { useEffect } from 'react'
+import Nav from './Nav'
 
 const StudentCourseCard = (props) => {
 // console.log(props.courses)
@@ -34,8 +35,8 @@ for (const value of scores) {
   sum += value;
 }
 
-console.log(sum/scores.length); 
-
+// console.log(sum/scores.length); 
+console.log(details)
 return(<div>
     <h1>{props.courses}</h1>
     <h1>gpa: {sum/scores.length}</h1>

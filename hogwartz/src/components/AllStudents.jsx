@@ -5,10 +5,13 @@ import { useParams } from 'react-router-dom'
 import Search from './Search'
 import {  useNavigate } from 'react-router-dom'
 import Student from './Student'
+import Nav from './Nav'
+import '../Style/index.css'
+
 
 const AllStudents = ({viewStudent}) => {
   const allstudentsstyle = {
-    backgroundColor:''
+    backgroundColor:'#111'
   }
   const navigate = useNavigate()
 const [searchQuery,setSearchQuery] = useState('')
@@ -34,10 +37,21 @@ const handleChange =(e)=>{
 }
 const sayHello = () => { console.log('hi')}
 // console.log(viewStudent)
+
+const pstyle = {
+  fontSize: "1.2em",
+  lineHeight: "150%",
+  textAlign: "center",
+  color: "MintCream",
+  letterSpacing: ".5px"
+}
+
 return(
   <div style={allstudentsstyle}>
+          <Nav />
+
     <Search onSubmit={handleSubmit}handleChange={handleChange} value={searchQuery}/>
-    <p>List of all students</p>
+    <p style={pstyle} >List of all students</p>
     {students.map((student) => (
                 <Student
                   studentid={student.id}
