@@ -6,7 +6,10 @@ const navstyle = {
   backgroundColor: '#F57017',
   justifyContent: 'space-between',
   textAlign: 'center',
-  padding: "40px 0"
+  padding: "40px 10px",
+  verticalAlign: 'baseline',
+  border: '0',
+  outline: '0'
 }
 
 

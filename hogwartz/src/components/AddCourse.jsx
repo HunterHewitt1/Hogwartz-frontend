@@ -2,8 +2,8 @@ import axios from 'axios'
 import {useState} from 'react'
 import { useNavigate} from 'react-router-dom'
 import {BASE_URL} from '../globals'
-
-
+import Nav from './Nav'
+import '../Style/index.css'
 
 const AddCourse =()=>{
 
@@ -58,10 +58,17 @@ const formStyle = {
   margin: '0 auto 20px auto',
   padding: '0 16px 16px 16px',
   maxWidth: '468px',
-  textAlign: 'left'
+  textAlign: 'left',
+  marginTop: '10px',
+  backgroundColor: 'PaleGoldenRod'
 }
-
+const poop ={
+    // backgroundColor:'#111'
+}
 return (
+    <div style={poop}>
+          <Nav />
+
     <div className="addStudentPage" style={formStyle}>
 			<form onSubmit={handleSubmit}>
 				<h1>Creating New Course</h1>
@@ -78,7 +85,7 @@ return (
       <button>Submit</button>
 			</form>
 		</div>
-
+        </div>
 )
 }
 
