@@ -18,7 +18,7 @@ const navstyle = {
     <Link to={'/allcourses'}>All Coursess | </Link>
     <Link to={'/addstudent'}>Add Student | </Link>
     <Link to={'/addcourse'}>Add Course | </Link>
-   
+   <Link to={'/studentprofile/:id'}>student profile</Link>
 
   </div>
 )

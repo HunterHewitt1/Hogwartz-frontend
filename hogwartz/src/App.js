@@ -6,24 +6,12 @@ import SearchResults from './pages/SearchResults'
 import AddStudent from './components/AddStudent'
 import AddCourse from './components/AddCourse'
 import AllCourses from './components/AllCourses'
-import Student from './components/Student'
+import StudentProfile from './components/StudentProfile'
 import { BASE_URL } from './globals'
 import axios from 'axios'
 import { useParams, useState } from 'react'
 
 function App() {
-  // const [student, setStudent] = useState('')
-
-  // const viewStudent = async (id) => {
-  //   try {
-  //     const res = await axios.get(`${BASE_URL}/students/${id}`)
-  //     setStudent(res.data)
-  //     console.log(student)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-
   return (
     <div className="App">
       <Nav />
@@ -33,7 +21,7 @@ function App() {
         <Route path="/allstudents" element={<AllStudents />} />
         <Route path="/allcourses" element={<AllCourses />} />
         <Route path="/addstudent" element={<AddStudent />} />
-        <Route path="/students/:id" element={<Student />} />
+        <Route path="/studentprofile/:id" element={<StudentProfile />} />
         <Route path="/addcourse" element={<AddCourse />} />
       </Routes>
     </div>
