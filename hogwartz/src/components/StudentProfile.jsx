@@ -6,7 +6,6 @@ import { useEffect } from 'react'
 
 const StudentProfile = () => {
   let id = window.location.href.split('/').reverse()[0]
-  console.log(id)
   const [student, setStudent] = useState('')
 
   const viewStudent = async () => {
@@ -21,13 +20,14 @@ const StudentProfile = () => {
     viewStudent()
   }, [])
 
-console.log(student)
+
+
   return(
     <div>
 <h1>{student.name}</h1>
 <h3>{student.email}</h3>
-<h3>courses</h3>
-<h3>gpa</h3>
+<h3>{student.courses}</h3>
+<h3>{student.gpa}</h3>
 </div>
   )
 

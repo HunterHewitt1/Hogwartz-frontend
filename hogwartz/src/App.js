@@ -7,6 +7,7 @@ import AddStudent from './components/AddStudent'
 import AddCourse from './components/AddCourse'
 import AllCourses from './components/AllCourses'
 import StudentProfile from './components/StudentProfile'
+import CourseProfile from './components/CourseProfile'
 import { BASE_URL } from './globals'
 import axios from 'axios'
 import { useParams, useState } from 'react'
@@ -23,6 +24,7 @@ function App() {
         <Route path="/addstudent" element={<AddStudent />} />
         <Route path="/studentprofile/:id" element={<StudentProfile />} />
         <Route path="/addcourse" element={<AddCourse />} />
+        <Route path="/courseprofile/:id" element={<CourseProfile />} />
       </Routes>
     </div>
   )
