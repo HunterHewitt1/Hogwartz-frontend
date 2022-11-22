@@ -24,20 +24,18 @@ const Student = (props)=>{
 
     const [student, setStudent] = useState('')
 
+
     const viewStudent = async (id) => {
-        const res = await axios.get(`${BASE_URL}/students/${id}`)
+        const res = await axios.get(`${BASE_URL}/students/${id}`)     
         setStudent(res.data)
-        console.log(student)
     }
+
 
 
     return (
         <div style={studentCardStyle}>
             <div>
                 <h1>{props.studentsList.name}</h1>
-            </div>
-            <div>
-                <h2>GPA = {props.studentsList.gpa}</h2>
             </div>
             <div>
                 <h2>{props.studentsList.email}</h2>

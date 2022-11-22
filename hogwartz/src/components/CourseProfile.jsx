@@ -24,6 +24,8 @@ const CourseProfile = () => {
     <div>
 <h3>course name: {course.name}</h3>
 <h3>grade: {course.grade}</h3>
+<h3>students enrolled list</h3>
+
 </div>
   )
 
