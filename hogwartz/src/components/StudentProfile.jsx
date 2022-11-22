@@ -29,9 +29,11 @@ const StudentProfile = () => {
 // console.log(student.courses)
 // const courseList = student.courses
 // console.log(courseList)
-
+const ff = {
+  color:'white'
+}
   return(
-    <div>
+    <div style={ff}>
             <Nav />
 
 <h1>{student.name}</h1>

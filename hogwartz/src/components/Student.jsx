@@ -21,7 +21,7 @@ const Student = (props)=>{
         padding: '0 16px 16px 16px',
         maxWidth: '268px',
         textAlign: 'left',
-        backgroundColor:'#235789'   
+        backgroundColor:'#235789' 
     }
 
     const [student, setStudent] = useState('')

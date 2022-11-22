@@ -16,7 +16,6 @@ const Course = (props)=>{
         padding: '0 16px 16px 16px',
         maxWidth: '268px',
         textAlign: 'left',
-        color: 'black',
         backgroundColor:'#235789'  
     }
 

@@ -34,10 +34,12 @@ let sum = 0;
 for (const value of scores) {
   sum += value;
 }
-
+const asd =  {
+  color:'white'
+}
 // console.log(sum/scores.length); 
 console.log(details)
-return(<div>
+return(<div style={asd}>
     <h1>{props.courses}</h1>
     <h1>gpa: {sum/scores.length}</h1>
   </div>)
